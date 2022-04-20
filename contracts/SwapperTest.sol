@@ -16,7 +16,6 @@ interface ISwapperTest {
         returns (uint256 amountOutMin);
 }
 
-// ここにSwapperTestコントラクトを書く
 contract SwapperTest is Swapper, ISwapperTest {
     constructor(
         IUniswapV2Router02 _router,

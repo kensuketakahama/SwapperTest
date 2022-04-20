@@ -19,7 +19,6 @@ interface ISwapper {
     function withdraw(IERC20 token, uint256 amount) external;
 }
 
-// ここにSwapperコントラクトを書く
 contract Swapper is ISwapper {
     using SafeERC20 for IERC20;
     using SafeMath for uint256;
@@ -105,10 +104,9 @@ contract Swapper is ISwapper {
             block.timestamp
         );
 
-        // 5. ...
+        // 5. イベントを発火
         emit Swap(msg.sender, amountIn, amounts[1]);
 
-        // 6. ...
     }
 
     function withdraw(IERC20 token, uint256 amount)
